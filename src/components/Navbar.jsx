@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import styles from "./Navbar.module.css";
-// import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const navRef = useRef();
@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navContainer}>
       <button className={styles.openBtn} onClick={showNavbar}>
-        {/* <FaBars /> */}
+        <FaBars />
       </button>
       <ul ref={navRef} className={styles.listContainer}>
         <li>
@@ -23,7 +23,7 @@ const Navbar = () => {
           <a href="#Contact">Contact</a>
         </li>
         <button className={styles.closeBtn} onClick={showNavbar}>
-          {/* <FaTimes /> */}
+          <FaTimes />
         </button>
       </ul>
     </nav>
