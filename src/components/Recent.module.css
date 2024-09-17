@@ -1,0 +1,83 @@
+.recent {
+  margin-top: 9rem;
+  padding: 2rem;
+  background-color: rgba(237, 247, 250, 1);
+}
+.recentPost {
+  display: flex;
+
+  justify-content: space-around;
+}
+.recentPost h1 {
+  font-size: 20px;
+  margin-right: 40%;
+  font-weight: 600;
+}
+.recentCard {
+  display: flex;
+
+  margin-top: -10px;
+  padding: 2%;
+}
+.viewAll {
+  text-decoration: none;
+  color: rgba(0, 168, 204, 1);
+}
+.card1 {
+  width: 40%;
+  background-color: white;
+  padding: 2.5rem;
+
+  border-radius: 10px;
+  margin-left: 6rem;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card1 h1 {
+  margin-bottom: 2rem;
+  font-size: 26px;
+}
+.dateAbout {
+  display: flex;
+
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.card {
+  width: 368px;
+}
+
+@media only screen and (max-width: 767px) {
+  .recent {
+    /* width: 100%; */
+    margin-top: 4rem;
+  }
+  .card1 {
+    width: 100%;
+
+    /* padding: 0px; */
+    margin: 0;
+  }
+  .viewAll {
+    display: none;
+  }
+  .recentPost h1 {
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 500;
+    /* margin-bottom: 90px; */
+  }
+  .card {
+    margin: 0;
+    width: 100%;
+  }
+  .recentCard {
+    gap: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .card1 h1 {
+    font-size: 24px;
+  }
+}
