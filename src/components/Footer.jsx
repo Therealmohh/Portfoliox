@@ -18,13 +18,13 @@ const Footer = () => {
       <div className={styles.footerLinks}>
         <ul>
           <li>
-            <a href="#about">About Us</a>
+            <a href="#about">Works</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Blogs</a>
           </li>
           <li>
-            <a href="#privacy">Privacy Policy</a>
+            <a href="#privacy">Contact</a>
           </li>
           <li>
             <a href="#terms">Terms of Service</a>

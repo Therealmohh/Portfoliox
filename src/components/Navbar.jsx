@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import styles from "./Navbar.module.css";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const Navbar = () => {
   const navRef = useRef();
@@ -15,16 +15,40 @@ const Navbar = () => {
       </button>
       <ul ref={navRef} className={styles.listContainer}>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            exact="true"
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <a href="#Works">Works</a>
+          <NavLink
+            to="/Works"
+            className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            exact="true"
+          >
+            Works
+          </NavLink>
         </li>
         <li>
-          <Link to="/blogs">Blogs</Link>
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            exact="true"
+          >
+            Blogs
+          </NavLink>
         </li>
         <li>
-          <a href="#Contact">Contact</a>
+          <NavLink
+            to="/Contact"
+            className={({ isActive }) => (isActive ? styles.activeLink : "")}
+            exact="true"
+          >
+            Contact
+          </NavLink>
         </li>
         <button className={styles.closeBtn} onClick={showNavbar}>
           <FaTimes />

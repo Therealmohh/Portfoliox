@@ -24,6 +24,38 @@ li a {
   display: none;
 }
 
+.listContainer li a:hover {
+  color: rgba(255, 100, 100, 1);
+  transition: 0.2s;
+  transform: translateY(-5px);
+}
+.activeLink {
+  color: rgba(255, 100, 100, 1);
+  font-weight: bold;
+}
+.listContainer li {
+  position: relative;
+}
+.listContainer li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: rgba(255, 100, 100, 1);
+  transition: width 0.4s ease-in-out;
+}
+
+.listContainer li:hover::after {
+  width: 100%;
+}
+
+.activeLink {
+  color: red;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 767px) {
   .openBtn,
   .closeBtn {
@@ -31,7 +63,6 @@ li a {
     background: none;
     border: none;
     font-size: 2rem;
-    /* visibility: visible; */
 
     margin-left: auto;
     font-size: 30px;

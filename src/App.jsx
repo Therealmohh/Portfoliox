@@ -1,12 +1,13 @@
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Blogs from "./pages/Blogs";
-import Contact from "./pages/Contact"; // Assuming you have a Contact component
-import HeroSection from "./components/HeroSection"; // Home page content
+
+import HeroSection from "./components/HeroSection";
 import Recent from "./components/Recent";
 import FeaturedWorks from "./components/FeaturedWorks";
 import Footer from "./components/Footer";
+import Blogs from "./pages/Blogs";
+import Works from "./pages/Works";
+import Contact from "./pages/Contact";
 import "./App.css";
 
 function App() {
@@ -30,9 +31,8 @@ function App() {
           element={
             <>
               <Blogs />
-              {/* <Recent />
-              <FeaturedWorks />
-              <Footer /> */}
+
+              <Footer />
             </>
           }
         />
@@ -41,12 +41,21 @@ function App() {
           element={
             <>
               <Contact />
-              <Recent />
-              <FeaturedWorks />
+
               <Footer />
             </>
           }
         />
+        <Route
+          path="/Works"
+          element={
+            <>
+              <Works />
+
+              <Footer />
+            </>
+          }
+        ></Route>
       </Routes>
     </Router>
   );
